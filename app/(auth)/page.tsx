@@ -1,6 +1,12 @@
 import { cn } from '@/lib/utils'
 
-const Btn = ({ children, className = '' }) => {
+const Btn = ({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
   return (
     <button
       className={cn('bg-white rounded text-lg font-semibold  h-16', className)}

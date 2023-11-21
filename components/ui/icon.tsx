@@ -1,4 +1,5 @@
-import { icons } from 'lucide-react'
+
+import { icons as LucideIcons } from 'lucide-react';
 
 const Icon = ({
   name,
@@ -6,14 +7,15 @@ const Icon = ({
   size,
   className,
 }: {
-  name: string
-  color?: string
-  size?: string
-  className?: string
+  name: keyof typeof LucideIcons;
+  color?: string;
+  size?: string;
+  className?: string;
 }) => {
-  const LucideIcon = icons[name] ?? icons['Home']
+  const LucideIcon = LucideIcons[name];
 
-  return <LucideIcon color={color} size={size} className={className} />
+  return <LucideIcon color={color} size={size} className={className} />;
+};
 }
 
 export default Icon
